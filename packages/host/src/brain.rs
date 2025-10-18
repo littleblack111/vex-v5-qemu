@@ -12,7 +12,8 @@ use tokio::{
     io::{AsyncReadExt, AsyncWriteExt},
     process::{Child, Command},
     sync::{
-        mpsc::{self}, Mutex,
+        mpsc::{self},
+        Mutex,
     },
     task::AbortHandle,
     time::sleep,

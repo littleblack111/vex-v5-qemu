@@ -180,10 +180,7 @@ impl DisplayRenderer {
     pub fn draw_header(&mut self, name: String, time: Duration) {
         self.save();
 
-        let text_size = TextSize {
-            num: 11,
-            denom: 24,
-        };
+        let text_size = TextSize { num: 11, denom: 24 };
 
         // Background
         self.context.foreground_color = HEADER_BG;

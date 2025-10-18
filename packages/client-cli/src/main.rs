@@ -18,8 +18,12 @@ use simplelog::{ColorChoice, ConfigBuilder, TermLogger, TerminalMode};
 use tokio::{
     io::{stdout, AsyncReadExt, AsyncWriteExt},
     process::Command,
+    time::{sleep, Duration},
 };
-use vex_v5_qemu_host::brain::{Binary, Brain};
+use vex_v5_qemu_host::{
+    brain::{Binary, Brain},
+    protocol::battery::BatteryData,
+};
 use winit::event_loop::EventLoop;
 
 use crate::display_window::DisplayWindow;
@@ -99,7 +103,7 @@ async fn main() -> anyhow::Result<()> {
     )
     .unwrap();
 
-    let mut qemu = Command::new("qemu-system-arm");
+    let mut qemu = Command::new(opt.qemu.clone());
     qemu.args(opt.qemu_args);
     if opt.gdb {
         qemu.args(["-S", "-s"]);
