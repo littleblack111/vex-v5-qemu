@@ -14,7 +14,7 @@ workspace = true
 
 [dependencies]
 vex-v5-qemu-protocol = { path = "../protocol" }
-tokio = { version = "1.39.3", features = ["full"] }
+tokio = { version = "1.50.0", features = ["full"] }
 miette = "7.2.0"
 thiserror = "1.0.63"
 bincode = "2.0.1"
