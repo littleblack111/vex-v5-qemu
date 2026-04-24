@@ -30,11 +30,11 @@
         "@xterm/addon-webgl": "^0.18.0",
         "prettier": "^3.3.3",
         "prettier-plugin-svelte": "^3.2.6",
-        "svelte": "^4.2.18",
+        "svelte": "^5.53.5",
         "svelte-check": "^3.8.5",
         "tslib": "^2.6.3",
         "typescript": "^5.5.3",
-        "vite": "^5.4.0"
+        "vite": "^6.4.2"
     },
     "dependencies": {
         "@rich_harris/svelte-split-pane": "^1.1.3",
